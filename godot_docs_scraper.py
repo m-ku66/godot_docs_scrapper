@@ -3,14 +3,12 @@ import shutil
 import requests
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
+from os.path import join
 
 # ========== CONFIG ==========
 BASE_URL = "https://docs.godotengine.org/en/stable/classes/class_{}.html"
 CLASSES_TO_FETCH = [
-    "Node",
-    "Area3D",
-    "Camera3D",
-    "CharacterBody3D"
+    "Input",
 ]
 OUTPUT_DIR = "godot_docs_md"
 CHUNK_SIZE = 4000  # characters per markdown chunk
